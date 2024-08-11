@@ -1,0 +1,129 @@
+/* @font-face {
+  font-family: 'Caveat', Times ;
+  font-weight: 400;
+  font-style: normal;
+  src: url(./Caveat/Caveat-VariableFont_wght.ttf) format('truetype');
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Protest+Revolution&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Caveat", Times;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./bkg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+}
+
+@media screen and (max-width:500px) {
+  body {
+    background-position: right;
+  }
+
+  .calculator {
+    background-color: #00000060 !important;
+  }
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  background-color: #ffffff8e;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  filter: grayscale(1);
+}
+
+.calculator:hover {
+  filter: grayscale(0);
+}
+
+
+.display {
+  width: 100%;
+  height: 70px;
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 28px;
+  color: #fff;
+  text-align: left;
+  box-shadow: inset 0px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  height: 60px;
+  background-color: #4a4a4a;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), inset 0px 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(1px 1px 20px black);
+}
+
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5), inset 0px -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4), inset 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+.btn:nth-child(4n) {
+  background-color: #ff9500;
+}
+
+.btn:nth-child(17) {
+  background-color: #ff2d55;
+}
+
+.btn:nth-child(18) {
+  background-color: #ff3b30;
+  font-size: 25px;
+}
+
+
+.btn:nth-child(14) {
+  grid-column: span 3;
+}
+
+.btn:nth-child(15) {
+  grid-column: span 2;
+}
+
+.btn:nth-child(16) {
+  grid-column: span 2;
+}
